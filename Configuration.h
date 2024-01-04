@@ -503,7 +503,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 5, 26 }
+#define DEFAULT_MAX_FEEDRATE          { 200, 150, 5, 26 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -591,7 +591,7 @@
 //  (0,0)
 #define X_PROBE_OFFSET_FROM_EXTRUDER -40  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 10  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -5   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -722,7 +722,7 @@
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
-#define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
+#define min_software_endstops false // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // @section machine
@@ -732,7 +732,7 @@
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS 200
-#define Y_MAX_POS 200
+#define Y_MAX_POS 180
 #define Z_MAX_POS 200
 
 //===========================================================================
@@ -853,12 +853,12 @@
 
   // 3 arbitrary points to probe.
   // A simple cross-product is used to estimate the plane of the bed.
-  #define ABL_PROBE_PT_1_X 15
-  #define ABL_PROBE_PT_1_Y 150
-  #define ABL_PROBE_PT_2_X 15
+  #define ABL_PROBE_PT_1_X 20
+  #define ABL_PROBE_PT_1_Y 140
+  #define ABL_PROBE_PT_2_X 20
   #define ABL_PROBE_PT_2_Y 20
-  #define ABL_PROBE_PT_3_X 150
-  #define ABL_PROBE_PT_3_Y 20
+  #define ABL_PROBE_PT_3_X 140
+  #define ABL_PROBE_PT_3_Y 80
 
 #endif
 
